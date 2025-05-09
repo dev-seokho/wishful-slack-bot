@@ -1,8 +1,8 @@
-name: whishful-til
+name: whishful-study
 
 on:
   schedule:
-    - cron: '30 12 * * *'
+    - cron: '0 23 * * 3,6'
   workflow_dispatch:
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
           pip install bs4 requests
           pip install pytz
 
-      - name: Run TIL Notice
-        run: python actions/til_notice.py
+      - name: Run STUDY Notice
+        run: python actions/study_notice.py
         env:
           TIL_WEBHOOK_URL: ${{ secrets.TIL_WEBHOOK_URL }}
