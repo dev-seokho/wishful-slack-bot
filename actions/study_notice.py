@@ -12,7 +12,7 @@ def post_message(message):
 kst = pytz.timezone("Asia/Seoul")
 date_string = datetime.now(kst).strftime("%Y-%m-%d")
 TIL_NOTICE = f"""
-📆 {date_string}
+📖 {date_string} 스터디 리마인더 📖
 <!channel> 오늘은 스터디가 진행되는 날입니다!
 다음과 같은 포맷으로 스레드를 만든 뒤, 스터디를 진행해주세요.
 

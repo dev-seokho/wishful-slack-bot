@@ -11,7 +11,7 @@ def post_message(message):
 kst = pytz.timezone("Asia/Seoul")
 date_string = datetime.now(kst).strftime("%Y-%m-%d")
 TIL_NOTICE = f"""
-📆 {date_string}
+😺 {date_string} TIL 리마인더 😺
 <!channel> 오늘의 TIL을 공유할 시간입니다!
 
 💭 구글폼 링크
@@ -21,6 +21,7 @@ TIL_NOTICE = f"""
 - <https://docs.google.com/forms/d/e/1FAIpQLSddHG66sF7okeqFqYBliYYsoR6NdID3qpeLGs5-vwHGbey65Q/viewform|구글폼 작성하러 가기>
 
 📋 구글시트 링크
+- 위의 구글폼을 작성하시면, 자동으로 구글시트에 작성됩니다.
 - 구성원들이 성장하고 있는지 함께 확인해주세요.
 - <https://docs.google.com/spreadsheets/d/12t2ApDFbx6tt2j56Sw0_Fz61SgWgyO2mjWpffP0rkSk/edit?resourcekey=&gid=854817029#gid=854817029|TIL 기록 구글시트 열기>
 
