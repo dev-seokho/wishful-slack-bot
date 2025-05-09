@@ -1,0 +1,28 @@
+name: whishful-til
+
+on:
+  schedule:
+    - cron: '30 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install bs4 requests
+
+      - name: Run TIL Notice
+        run: python actions/til_notice.py
+        env:
+          TIL_WEBHOOK_URL: ${{ secrets.TIL_WEBHOOK_URL }}
